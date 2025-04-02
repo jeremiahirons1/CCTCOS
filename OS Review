@@ -1,1 +1,41 @@
+Windows Perisistence -
+Powershell Profiles
+Windows Registry: Run keys, runonce; HKLM, HKU
+USB: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Enum\USB, HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Enum\USBSTOR
+HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\RecentDocs
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList
+AUTORUNS via Sysinternals
+schtasks - Triggers and Actions 
+Get-Process | Select Name, Id, Description | Sort -Property Id | more
+Get-Ciminstance Win32_service | Select Name, Processid, Pathname | more
+sc query
+Get-NetTCPConnection -State Established
+System Processes run from C:\Windows\System32
+Third party processes will in C:\Program Files
 
+
+1. Windows Artifacts
+UserAssist
+Windows Background Activity Moderator (BAM)
+Recycle Bin
+Prefetch
+Jump Lists
+Recent Files
+Browser Artifacts - only with sysinternals, strings.exe
+Auditing
+Event Logs
+
+
+
+
+
+Linux Persistence - 
+Runlevels
+/etc/init and /etc/inittab
+/etc/rc*.d
+systemctl list-unit --all
+~/.bashrc; ~/.bash_profile
+/var/spool/cron
+/etc/crontab
+crontab -l -u [user]
+htop and top for processes in real time
